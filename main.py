@@ -12,15 +12,16 @@ lines = [] #Создание списка
 
 for line in strk: #Цикл
     if podstr in line: #Проверка подстроки 
-        lines.append(line.strip()) #Добавление строк в список без пробелов 
+        lines.append(line) #Добавление строк в список без пробелов 
         
 lenLines = len(lines) #Количество найденых строк
-print("Количество строк с подстрокой: {0}".format(lenLines)) #Вывод на экран
+print("Количество строк с подстрокой: {}".format(lenLines)) #Вывод на экран
 
 for line in lines: #Цикл
-    print(line) #Вывод
-    break #Прекращение цикла
-sorted_lines = sorted(lines, key = len) #Сортируем список по длине строк
-for line in sorted_lines: #Цикл отсортированных строк
     print(line) #Вывод на экран
-    break #Прекращение цикла
+    
+sorted_lines = sorted(lines, key = len) #Сортируем список по длине строк
+
+for line in sorted_lines: #Цикл отсортированных строк
+    print(f"Сортированные строки: {line}") #Вывод на экран
+    
